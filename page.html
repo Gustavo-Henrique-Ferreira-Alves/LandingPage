@@ -14,13 +14,12 @@
     <header>
         <div class="container_header">
             <nav id="links" class="menu_header">
-                <a href="#inicio">Início</a>
-                <a href="#container_sobre">Sobre</a>
-                <a href="#desafios">Desafios</a>
-                <a href="#endereco">Endereço</a>
-                <a href="#" onclick="btndoMenu()">Fechar</a>
+                <a href="#inicio" onclick="btndoMenu()">Início</a>
+                <a href="#container_sobre" onclick="btndoMenu()">Sobre</a>
+                <a href="#desafios" onclick="btndoMenu()">Desafios</a>
+                <a href="#endereco" onclick="btndoMenu()">Endereço</a>
             </nav>
-            <a class="btn_menu" href="#" onclick="btndoMenu()">
+            <a class="btn_menu" href="#javascript:void(0)" onclick="btndoMenu()">
                 <i class="fas fa-bars"></i>
             </a>
         </div>
@@ -31,7 +30,6 @@
             <img class="fundo_banner" src="imagem-fundo-banner.png" alt="banner">
             <div class="box_conteudo">
                 <h1>Desenvolvimento de sistemas 2021</h1>
-                <hr class="hr_banner">
                 <span>senai informática</span>
                 <img class="mouse" src="mouse.svg" alt="mouse">
             </div>
@@ -82,15 +80,14 @@
         </section>
     </main>
 
-    <section class="endereco">
+    <section id="endereco" class="endereco">
         <h3>Endereço:</h3>
         <div class="box_endereco">
             <p>Alameda Barão de Limeira, 539
                 Santa Cecilia, São Paulo - SP
                 CEP: 01202-001</p>
-            <img class=endereco_img src="mapa.png" alt="mapa">
         </div>
-
+        <img class=endereco_img src="mapa.png" alt="mapa">
     </section>
 
     <footer>
@@ -101,7 +98,7 @@
         function btndoMenu() {
             var menu = document.getElementById("links");
             if (menu.style.display === "flex"){
-                //Esconda o menu
+                //Esconde o menu
                 menu.style.display = "none";
             } else {
                 //Mostra o menu
