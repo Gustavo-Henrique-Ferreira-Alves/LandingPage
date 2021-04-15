@@ -4,20 +4,25 @@
 <Head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <script src="https://kit.fontawesome.com/463a603271.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css page.css">
 </Head>
 
 <body>
     <header>
         <div class="container_header">
-            <nav class="menu_header">
+            <nav id="links" class="menu_header">
                 <a href="#inicio">Início</a>
                 <a href="#container_sobre">Sobre</a>
                 <a href="#desafios">Desafios</a>
                 <a href="#endereco">Endereço</a>
+                <a href="#" onclick="btndoMenu()">Fechar</a>
             </nav>
+            <a class="btn_menu" href="#" onclick="btndoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
     </header>
 
@@ -27,7 +32,7 @@
             <div class="box_conteudo">
                 <h1>Desenvolvimento de sistemas 2021</h1>
                 <hr class="hr_banner">
-                <span>senai de informática</span>
+                <span>senai informática</span>
                 <img class="mouse" src="mouse.svg" alt="mouse">
             </div>
         </section>
@@ -36,7 +41,7 @@
             <div class="container espacamento_sobre">
                 <h2 class="h2_sobre">sobre os projetos</h2>
                 <div class="box_sobre">
-                    <img src="imagem-seção-sobre.png" alt="banner seção sobre">
+                    <img class="img_box_sobre" src="imagem-seção-sobre.png" alt="banner seção sobre">
                     <div class="box_sobre_textos">
                         <span>participantes</span>
                         <h3 class="h3_sobre">mais de 80 alunos organizados em 16 grupos</h3>
@@ -91,6 +96,19 @@
     <footer>
         <span>Copyright © 2020 - Escola Senai de Informática</span>
     </footer>
+
+    <script>
+        function btndoMenu() {
+            var menu = document.getElementById("links");
+            if (menu.style.display === "flex"){
+                //Esconda o menu
+                menu.style.display = "none";
+            } else {
+                //Mostra o menu
+                menu.style.display = "flex"
+            }
+        }
+    </script>
 </body>
 
 </html>
